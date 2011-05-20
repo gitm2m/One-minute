@@ -14,6 +14,17 @@
 		D24585AD13865AB900B0881A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D24585AC13865AB900B0881A /* main.m */; };
 		D24585B013865ABA00B0881A /* One_minuteAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D24585AF13865ABA00B0881A /* One_minuteAppDelegate.m */; };
 		D24585B313865ABA00B0881A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24585B113865ABA00B0881A /* MainWindow.xib */; };
+		D24585BB13865AFF00B0881A /* MyAVController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24585BA13865AFF00B0881A /* MyAVController.m */; };
+		D24585BD13865CBF00B0881A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24585BC13865CBF00B0881A /* AVFoundation.framework */; };
+		D24585BF13865CC700B0881A /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24585BE13865CC700B0881A /* CoreAudio.framework */; };
+		D24585C113865CCE00B0881A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24585C013865CCE00B0881A /* CoreMedia.framework */; };
+		D24585C313865CD200B0881A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24585C213865CD200B0881A /* CoreVideo.framework */; };
+		D24585C713865FD100B0881A /* EncoderImagesToMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = D24585C513865FD100B0881A /* EncoderImagesToMovie.m */; };
+		D24585C813865FD100B0881A /* EncoderImagesToMovie.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24585C613865FD100B0881A /* EncoderImagesToMovie.xib */; };
+		D24585D01386679300B0881A /* MyAVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24585CF1386679300B0881A /* MyAVController.xib */; };
+		D24585EC1386748D00B0881A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D24585EB1386748D00B0881A /* Utils.m */; };
+		D24585EF13867C3700B0881A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24585EE13867C3700B0881A /* MessageUI.framework */; };
+		D24586111386A3B500B0881A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24586101386A3B500B0881A /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +32,27 @@
 		D245859F13865AB900B0881A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D24585A113865AB900B0881A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D24585A313865AB900B0881A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D24585A713865AB900B0881A /* One minute-Info.plist */ = {isa = PBXFileReference; path = "One minute-Info.plist"; sourceTree = "<group>"; };
+		D24585A713865AB900B0881A /* One minute-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "One minute-Info.plist"; sourceTree = "<group>"; };
 		D24585A913865AB900B0881A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D24585AB13865AB900B0881A /* One minute-Prefix.pch */ = {isa = PBXFileReference; path = "One minute-Prefix.pch"; sourceTree = "<group>"; };
+		D24585AB13865AB900B0881A /* One minute-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "One minute-Prefix.pch"; sourceTree = "<group>"; };
 		D24585AC13865AB900B0881A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D24585AE13865AB900B0881A /* One_minuteAppDelegate.h */ = {isa = PBXFileReference; path = One_minuteAppDelegate.h; sourceTree = "<group>"; };
+		D24585AE13865AB900B0881A /* One_minuteAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = One_minuteAppDelegate.h; sourceTree = "<group>"; };
 		D24585AF13865ABA00B0881A /* One_minuteAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = One_minuteAppDelegate.m; sourceTree = "<group>"; };
 		D24585B213865ABA00B0881A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		D24585B913865AFF00B0881A /* MyAVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAVController.h; sourceTree = "<group>"; };
+		D24585BA13865AFF00B0881A /* MyAVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAVController.m; sourceTree = "<group>"; };
+		D24585BC13865CBF00B0881A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D24585BE13865CC700B0881A /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		D24585C013865CCE00B0881A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D24585C213865CD200B0881A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		D24585C413865FD100B0881A /* EncoderImagesToMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncoderImagesToMovie.h; sourceTree = "<group>"; };
+		D24585C513865FD100B0881A /* EncoderImagesToMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncoderImagesToMovie.m; sourceTree = "<group>"; };
+		D24585C613865FD100B0881A /* EncoderImagesToMovie.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EncoderImagesToMovie.xib; sourceTree = "<group>"; };
+		D24585CF1386679300B0881A /* MyAVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAVController.xib; sourceTree = "<group>"; };
+		D24585EA1386748D00B0881A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		D24585EB1386748D00B0881A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		D24585EE13867C3700B0881A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D24586101386A3B500B0881A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +60,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D24586111386A3B500B0881A /* QuartzCore.framework in Frameworks */,
+				D24585EF13867C3700B0881A /* MessageUI.framework in Frameworks */,
+				D24585C313865CD200B0881A /* CoreVideo.framework in Frameworks */,
+				D24585C113865CCE00B0881A /* CoreMedia.framework in Frameworks */,
+				D24585BF13865CC700B0881A /* CoreAudio.framework in Frameworks */,
+				D24585BD13865CBF00B0881A /* AVFoundation.framework in Frameworks */,
 				D24585A013865AB900B0881A /* UIKit.framework in Frameworks */,
 				D24585A213865AB900B0881A /* Foundation.framework in Frameworks */,
 				D24585A413865AB900B0881A /* CoreGraphics.framework in Frameworks */,
@@ -64,6 +95,12 @@
 		D245859E13865AB900B0881A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D24586101386A3B500B0881A /* QuartzCore.framework */,
+				D24585EE13867C3700B0881A /* MessageUI.framework */,
+				D24585C213865CD200B0881A /* CoreVideo.framework */,
+				D24585C013865CCE00B0881A /* CoreMedia.framework */,
+				D24585BE13865CC700B0881A /* CoreAudio.framework */,
+				D24585BC13865CBF00B0881A /* AVFoundation.framework */,
 				D245859F13865AB900B0881A /* UIKit.framework */,
 				D24585A113865AB900B0881A /* Foundation.framework */,
 				D24585A313865AB900B0881A /* CoreGraphics.framework */,
@@ -76,7 +113,14 @@
 			children = (
 				D24585AE13865AB900B0881A /* One_minuteAppDelegate.h */,
 				D24585AF13865ABA00B0881A /* One_minuteAppDelegate.m */,
+				D24585B913865AFF00B0881A /* MyAVController.h */,
+				D24585BA13865AFF00B0881A /* MyAVController.m */,
+				D24585CF1386679300B0881A /* MyAVController.xib */,
+				D24585C413865FD100B0881A /* EncoderImagesToMovie.h */,
+				D24585C513865FD100B0881A /* EncoderImagesToMovie.m */,
+				D24585C613865FD100B0881A /* EncoderImagesToMovie.xib */,
 				D24585B113865ABA00B0881A /* MainWindow.xib */,
+				D24585E91386748D00B0881A /* Utils */,
 				D24585A613865AB900B0881A /* Supporting Files */,
 			);
 			path = "One minute";
@@ -91,6 +135,15 @@
 				D24585AC13865AB900B0881A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D24585E91386748D00B0881A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D24585EA1386748D00B0881A /* Utils.h */,
+				D24585EB1386748D00B0881A /* Utils.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +198,8 @@
 			files = (
 				D24585AA13865AB900B0881A /* InfoPlist.strings in Resources */,
 				D24585B313865ABA00B0881A /* MainWindow.xib in Resources */,
+				D24585C813865FD100B0881A /* EncoderImagesToMovie.xib in Resources */,
+				D24585D01386679300B0881A /* MyAVController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +212,9 @@
 			files = (
 				D24585AD13865AB900B0881A /* main.m in Sources */,
 				D24585B013865ABA00B0881A /* One_minuteAppDelegate.m in Sources */,
+				D24585BB13865AFF00B0881A /* MyAVController.m in Sources */,
+				D24585C713865FD100B0881A /* EncoderImagesToMovie.m in Sources */,
+				D24585EC1386748D00B0881A /* Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +281,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "One minute/One minute-Prefix.pch";
 				INFOPLIST_FILE = "One minute/One minute-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -236,6 +295,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "One minute/One minute-Prefix.pch";
 				INFOPLIST_FILE = "One minute/One minute-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -261,6 +321,7 @@
 				D24585B813865ABA00B0881A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

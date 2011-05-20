@@ -7,6 +7,8 @@
 //
 
 #import "One_minuteAppDelegate.h"
+#import "MyAVController.h"
+
 
 @implementation One_minuteAppDelegate
 
@@ -15,8 +17,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    if (cameraController == nil) {
+        cameraController = [[MyAVController alloc] initWithNibName:@"MyAVController" bundle:nil];
+    }
+    
+    [self.window addSubview:cameraController.view];
+    
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
+    
+    
+    
+    
     return YES;
 }
 

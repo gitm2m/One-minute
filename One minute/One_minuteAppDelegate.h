@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class MyAVController;
+
+
 @interface One_minuteAppDelegate : NSObject <UIApplicationDelegate> {
 
+    MyAVController *cameraController;
+    
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
