@@ -12,9 +12,13 @@
 @interface EncoderImagesToMovie : UIViewController <MFMailComposeViewControllerDelegate, UIActionSheetDelegate> {
     IBOutlet UIProgressView *progressView;
     float delta;
+    
+    IBOutlet UILabel *fpsLabel;
+    IBOutlet UISlider *fpsSlider;
 }
 - (IBAction) createMovie;
 
+- (IBAction) touchUpInsideFpsSlider;
 
 - (void) writeImagesAsMovie:(NSArray *)array toPath:(NSString*)path;
 

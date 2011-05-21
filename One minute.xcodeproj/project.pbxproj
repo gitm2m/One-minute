@@ -14,17 +14,24 @@
 		D24585AD13865AB900B0881A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D24585AC13865AB900B0881A /* main.m */; };
 		D24585B013865ABA00B0881A /* One_minuteAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D24585AF13865ABA00B0881A /* One_minuteAppDelegate.m */; };
 		D24585B313865ABA00B0881A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24585B113865ABA00B0881A /* MainWindow.xib */; };
-		D24585BB13865AFF00B0881A /* MyAVController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24585BA13865AFF00B0881A /* MyAVController.m */; };
+		D24585BB13865AFF00B0881A /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24585BA13865AFF00B0881A /* CameraController.m */; };
 		D24585BD13865CBF00B0881A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24585BC13865CBF00B0881A /* AVFoundation.framework */; };
 		D24585BF13865CC700B0881A /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24585BE13865CC700B0881A /* CoreAudio.framework */; };
 		D24585C113865CCE00B0881A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24585C013865CCE00B0881A /* CoreMedia.framework */; };
 		D24585C313865CD200B0881A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24585C213865CD200B0881A /* CoreVideo.framework */; };
 		D24585C713865FD100B0881A /* EncoderImagesToMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = D24585C513865FD100B0881A /* EncoderImagesToMovie.m */; };
 		D24585C813865FD100B0881A /* EncoderImagesToMovie.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24585C613865FD100B0881A /* EncoderImagesToMovie.xib */; };
-		D24585D01386679300B0881A /* MyAVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24585CF1386679300B0881A /* MyAVController.xib */; };
+		D24585D01386679300B0881A /* CameraController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24585CF1386679300B0881A /* CameraController.xib */; };
 		D24585EC1386748D00B0881A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D24585EB1386748D00B0881A /* Utils.m */; };
 		D24585EF13867C3700B0881A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24585EE13867C3700B0881A /* MessageUI.framework */; };
 		D24586111386A3B500B0881A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24586101386A3B500B0881A /* QuartzCore.framework */; };
+		D2D62A8E13882A390097530E /* WorkspaceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D62A8D13882A390097530E /* WorkspaceItem.m */; };
+		D2D62A9613882A600097530E /* WorkspacesController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D62A8F13882A600097530E /* WorkspacesController.m */; };
+		D2D62A9813882A600097530E /* WorkspacesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2D62A9413882A600097530E /* WorkspacesController.xib */; };
+		D2D62A9913882A600097530E /* WorkspaceFileListViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D62A9513882A600097530E /* WorkspaceFileListViewer.m */; };
+		D2E953651387A9AC0083CFA4 /* WorkspaceFileListViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2E953631387A9AC0083CFA4 /* WorkspaceFileListViewer.xib */; };
+		D2E953691387AD460083CFA4 /* MainMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E953671387AD460083CFA4 /* MainMenuController.m */; };
+		D2E9536A1387AD460083CFA4 /* MainMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2E953681387AD460083CFA4 /* MainMenuController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,8 +46,8 @@
 		D24585AE13865AB900B0881A /* One_minuteAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = One_minuteAppDelegate.h; sourceTree = "<group>"; };
 		D24585AF13865ABA00B0881A /* One_minuteAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = One_minuteAppDelegate.m; sourceTree = "<group>"; };
 		D24585B213865ABA00B0881A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		D24585B913865AFF00B0881A /* MyAVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAVController.h; sourceTree = "<group>"; };
-		D24585BA13865AFF00B0881A /* MyAVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAVController.m; sourceTree = "<group>"; };
+		D24585B913865AFF00B0881A /* CameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
+		D24585BA13865AFF00B0881A /* CameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
 		D24585BC13865CBF00B0881A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D24585BE13865CC700B0881A /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		D24585C013865CCE00B0881A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -48,11 +55,22 @@
 		D24585C413865FD100B0881A /* EncoderImagesToMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncoderImagesToMovie.h; sourceTree = "<group>"; };
 		D24585C513865FD100B0881A /* EncoderImagesToMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncoderImagesToMovie.m; sourceTree = "<group>"; };
 		D24585C613865FD100B0881A /* EncoderImagesToMovie.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EncoderImagesToMovie.xib; sourceTree = "<group>"; };
-		D24585CF1386679300B0881A /* MyAVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAVController.xib; sourceTree = "<group>"; };
+		D24585CF1386679300B0881A /* CameraController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraController.xib; sourceTree = "<group>"; };
 		D24585EA1386748D00B0881A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		D24585EB1386748D00B0881A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		D24585EE13867C3700B0881A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D24586101386A3B500B0881A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D2D62A8C13882A390097530E /* WorkspaceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkspaceItem.h; path = Workspace/WorkspaceItem.h; sourceTree = "<group>"; };
+		D2D62A8D13882A390097530E /* WorkspaceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkspaceItem.m; path = Workspace/WorkspaceItem.m; sourceTree = "<group>"; };
+		D2D62A8F13882A600097530E /* WorkspacesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkspacesController.m; path = Workspace/WorkspacesController.m; sourceTree = "<group>"; };
+		D2D62A9013882A600097530E /* WorkspacesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkspacesController.h; path = Workspace/WorkspacesController.h; sourceTree = "<group>"; };
+		D2D62A9313882A600097530E /* WorkspaceFileListViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkspaceFileListViewer.h; path = Workspace/WorkspaceFileListViewer.h; sourceTree = "<group>"; };
+		D2D62A9413882A600097530E /* WorkspacesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WorkspacesController.xib; path = Workspace/WorkspacesController.xib; sourceTree = "<group>"; };
+		D2D62A9513882A600097530E /* WorkspaceFileListViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkspaceFileListViewer.m; path = Workspace/WorkspaceFileListViewer.m; sourceTree = "<group>"; };
+		D2E953631387A9AC0083CFA4 /* WorkspaceFileListViewer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkspaceFileListViewer.xib; sourceTree = "<group>"; };
+		D2E953661387AD460083CFA4 /* MainMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuController.h; sourceTree = "<group>"; };
+		D2E953671387AD460083CFA4 /* MainMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuController.m; sourceTree = "<group>"; };
+		D2E953681387AD460083CFA4 /* MainMenuController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,13 +131,14 @@
 			children = (
 				D24585AE13865AB900B0881A /* One_minuteAppDelegate.h */,
 				D24585AF13865ABA00B0881A /* One_minuteAppDelegate.m */,
-				D24585B913865AFF00B0881A /* MyAVController.h */,
-				D24585BA13865AFF00B0881A /* MyAVController.m */,
-				D24585CF1386679300B0881A /* MyAVController.xib */,
+				D2E953661387AD460083CFA4 /* MainMenuController.h */,
+				D2E953671387AD460083CFA4 /* MainMenuController.m */,
+				D24585B913865AFF00B0881A /* CameraController.h */,
+				D24585BA13865AFF00B0881A /* CameraController.m */,
 				D24585C413865FD100B0881A /* EncoderImagesToMovie.h */,
 				D24585C513865FD100B0881A /* EncoderImagesToMovie.m */,
-				D24585C613865FD100B0881A /* EncoderImagesToMovie.xib */,
-				D24585B113865ABA00B0881A /* MainWindow.xib */,
+				D2D62A8B138828C10097530E /* WorkSpace */,
+				D2E9535F1387A94E0083CFA4 /* Resources */,
 				D24585E91386748D00B0881A /* Utils */,
 				D24585A613865AB900B0881A /* Supporting Files */,
 			);
@@ -144,6 +163,32 @@
 				D24585EB1386748D00B0881A /* Utils.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D2D62A8B138828C10097530E /* WorkSpace */ = {
+			isa = PBXGroup;
+			children = (
+				D2D62A9013882A600097530E /* WorkspacesController.h */,
+				D2D62A8F13882A600097530E /* WorkspacesController.m */,
+				D2D62A9413882A600097530E /* WorkspacesController.xib */,
+				D2D62A9313882A600097530E /* WorkspaceFileListViewer.h */,
+				D2D62A9513882A600097530E /* WorkspaceFileListViewer.m */,
+				D2D62A8C13882A390097530E /* WorkspaceItem.h */,
+				D2D62A8D13882A390097530E /* WorkspaceItem.m */,
+			);
+			name = WorkSpace;
+			sourceTree = "<group>";
+		};
+		D2E9535F1387A94E0083CFA4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D24585B113865ABA00B0881A /* MainWindow.xib */,
+				D2E953681387AD460083CFA4 /* MainMenuController.xib */,
+				D24585CF1386679300B0881A /* CameraController.xib */,
+				D24585C613865FD100B0881A /* EncoderImagesToMovie.xib */,
+				D2E953631387A9AC0083CFA4 /* WorkspaceFileListViewer.xib */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +244,10 @@
 				D24585AA13865AB900B0881A /* InfoPlist.strings in Resources */,
 				D24585B313865ABA00B0881A /* MainWindow.xib in Resources */,
 				D24585C813865FD100B0881A /* EncoderImagesToMovie.xib in Resources */,
-				D24585D01386679300B0881A /* MyAVController.xib in Resources */,
+				D24585D01386679300B0881A /* CameraController.xib in Resources */,
+				D2E953651387A9AC0083CFA4 /* WorkspaceFileListViewer.xib in Resources */,
+				D2E9536A1387AD460083CFA4 /* MainMenuController.xib in Resources */,
+				D2D62A9813882A600097530E /* WorkspacesController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,9 +260,13 @@
 			files = (
 				D24585AD13865AB900B0881A /* main.m in Sources */,
 				D24585B013865ABA00B0881A /* One_minuteAppDelegate.m in Sources */,
-				D24585BB13865AFF00B0881A /* MyAVController.m in Sources */,
+				D24585BB13865AFF00B0881A /* CameraController.m in Sources */,
 				D24585C713865FD100B0881A /* EncoderImagesToMovie.m in Sources */,
 				D24585EC1386748D00B0881A /* Utils.m in Sources */,
+				D2E953691387AD460083CFA4 /* MainMenuController.m in Sources */,
+				D2D62A8E13882A390097530E /* WorkspaceItem.m in Sources */,
+				D2D62A9613882A600097530E /* WorkspacesController.m in Sources */,
+				D2D62A9913882A600097530E /* WorkspaceFileListViewer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

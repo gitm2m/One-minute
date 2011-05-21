@@ -7,21 +7,20 @@
 //
 
 #import "One_minuteAppDelegate.h"
-#import "MyAVController.h"
+
 
 
 @implementation One_minuteAppDelegate
 
 
 @synthesize window=_window;
+@synthesize navController=_navController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    if (cameraController == nil) {
-        cameraController = [[MyAVController alloc] initWithNibName:@"MyAVController" bundle:nil];
-    }
+
     
-    [self.window addSubview:cameraController.view];
+    [self.window addSubview:self.navController.view];
     
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     // Override point for customization after application launch.
@@ -74,6 +73,7 @@
 
 - (void)dealloc
 {
+    [_navController release];
     [_window release];
     [super dealloc];
 }

@@ -16,10 +16,9 @@
 
 
 NSInteger sort(id a, id b, void *reverse) {
-    return [a 
-            compare:b
-            options:NSNumericSearch];
+    return [a compare:b options:NSNumericSearch];
 }
+
 
 
 
@@ -31,11 +30,39 @@ NSInteger sort(id a, id b, void *reverse) {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        //[self documentsFolderSize];
+        
     }
     return self;
 }
 
 
+- (unsigned long long int) documentsFolderSize {
+    NSFileManager *_manager = [NSFileManager defaultManager];
+    NSArray *_documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *_documentsDirectory = [_documentPaths objectAtIndex:0];   
+    NSArray *_documentsFileList;
+    NSEnumerator *_documentsEnumerator;
+    NSString *_documentFilePath;
+    unsigned long long int _documentsFolderSize = 0;
+    
+    _documentsFileList = [_manager subpathsAtPath:_documentsDirectory];
+    _documentsEnumerator = [_documentsFileList objectEnumerator];
+    while (_documentFilePath = [_documentsEnumerator nextObject]) {
+        NSDictionary *_documentFileAttributes = [_manager attributesOfItemAtPath:[_documentsDirectory stringByAppendingPathComponent:_documentFilePath] error:nil];
+        _documentsFolderSize += [_documentFileAttributes fileSize];
+    }
+    NSLog(@"%s - Free Diskspace: %u bytes - %d MiB", __PRETTY_FUNCTION__, _documentsFolderSize, (_documentsFolderSize/1024.0)/1024.0);
+    
+    
+    return _documentsFolderSize;
+}
+
+
+- (IBAction) touchUpInsideFpsSlider {
+    fpsLabel.text =  [NSString stringWithFormat:@"%d", (int)fpsSlider.value];
+}
 
 
 
@@ -89,7 +116,7 @@ NSInteger sort(id a, id b, void *reverse) {
 
 
 
-- (void )writeImagesAsMovie:(NSArray *)array toPath:(NSString*)path {
+- (void) writeImagesAsMovie:(NSArray *)array toPath:(NSString*)path {
     
     NSString *documents = [Utils documentsDirectory];
     
@@ -151,18 +178,15 @@ NSInteger sort(id a, id b, void *reverse) {
         CVBufferRelease(buffer);
     
     [NSThread sleepForTimeInterval:0.05];
-    //for (int i = 1;i<[array count]; i++)
-    //    
+
+    
     int reverseSort = NO;
     NSArray *newArray = [array sortedArrayUsingFunction:sort context:&reverseSort];
     
-    
-    //    NSArray *newArray = [array sortedArrayUsingComparator:^(NSString* a, NSString* b) { 
-    //        return [a compare:b options:NSNumericSearch]; 
-    //    }];
-    
-    
     delta = 1.0/[newArray count];
+    
+    int fps = (int)fpsSlider.value;
+    
     
     int i = 0;
     for (NSString *filename in newArray)
@@ -172,8 +196,8 @@ NSInteger sort(id a, id b, void *reverse) {
             
             i++;
             NSLog(@"inside for loop %d %@ ",i, filename);
-            CMTime frameTime = CMTimeMake(1, 15);
-            CMTime lastTime=CMTimeMake(i, 15); 
+            CMTime frameTime = CMTimeMake(1, fps);
+            CMTime lastTime=CMTimeMake(i, fps); 
             CMTime presentTime=CMTimeAdd(lastTime, frameTime);
             
             NSString *filePath = [documents stringByAppendingPathComponent:filename];
@@ -306,7 +330,7 @@ NSInteger sort(id a, id b, void *reverse) {
 		[alert release];
         
         [controller dismissModalViewControllerAnimated: YES];
-        [self dismissModalViewControllerAnimated:YES];
+        [self.navigationController popViewControllerAnimated:YES];
 	} else {
         [controller dismissModalViewControllerAnimated: YES];
 	}
@@ -338,7 +362,7 @@ NSInteger sort(id a, id b, void *reverse) {
         [alert release];
     }
     NSLog(@"dismiss");
-    [self dismissModalViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -347,6 +371,7 @@ NSInteger sort(id a, id b, void *reverse) {
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     
+    progressView.progress = 0;
     switch (buttonIndex) {
         case 0:
             [self displayComposerSheet];
@@ -354,6 +379,10 @@ NSInteger sort(id a, id b, void *reverse) {
             
         case 1:
             [self saveToMediaLibrary];
+            break;
+            
+        default:
+            [self.navigationController popViewControllerAnimated:YES];
             break;
     }
     
@@ -377,6 +406,28 @@ NSInteger sort(id a, id b, void *reverse) {
 
 #pragma mark - View lifecycle
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -397,8 +448,7 @@ NSInteger sort(id a, id b, void *reverse) {
         return YES;
     }
     
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return NO;
 }
 
 @end
