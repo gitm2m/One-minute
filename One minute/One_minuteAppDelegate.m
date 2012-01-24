@@ -6,7 +6,6 @@
 //  Copyright 2011 www.injoit.com. All rights reserved.
 //
 
-#import "JMC.h"
 #import "One_minuteAppDelegate.h"
 
 
@@ -27,11 +26,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
-    [[JMC instance]
-     configureJiraConnect:@"https://jira.injoit.com/"
-     projectKey:@"VOVATEST"
-     apiKey:@"b40c887f-ac3d-483e-92cd-af435318741a"];
     
     [self.window addSubview:self.navController.view];
     
