@@ -8,18 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class EncoderImagesToMovie;
 @class CameraController;
 @class WorkspacesController;
 
 @interface MainMenuController : UIViewController {
-    EncoderImagesToMovie *encodeController;
     CameraController *cameraController;
     WorkspacesController *workspacesController;
 }
 
 - (IBAction) camera;
-- (IBAction) movieCreator;
 - (IBAction) workspace;
 
 @end

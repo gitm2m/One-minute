@@ -8,10 +8,7 @@
 
 #import "MainMenuController.h"
 
-#import "EncoderImagesToMovie.h"
-//#import "WorkspaceFileListViewer.h"
 #import "CameraController.h"
-
 #import "WorkspacesController.h"
 
 @implementation MainMenuController
@@ -28,23 +25,21 @@
 
 
 - (IBAction) camera {
+    
     if (cameraController == nil) {
         cameraController = [[CameraController alloc] initWithNibName:@"CameraController" bundle:nil];
     }
+    
     [self.navigationController pushViewController:cameraController animated:YES];
 }
 
-- (IBAction) movieCreator {
-    if (encodeController == nil) {
-        encodeController = [[EncoderImagesToMovie alloc] initWithNibName:@"EncoderImagesToMovie" bundle:nil];
-    }
-    [self.navigationController pushViewController:encodeController animated:YES];
-}
+
 
 - (IBAction) workspace {
     if (workspacesController == nil) {
         workspacesController = [[WorkspacesController alloc] initWithNibName:@"WorkspacesController" bundle:nil];
     }
+    [workspacesController updateWorkspaces];
     [self.navigationController pushViewController:workspacesController animated:YES];
 }
 

@@ -15,6 +15,8 @@
     
     IBOutlet UILabel *fpsLabel;
     IBOutlet UISlider *fpsSlider;
+    
+    NSString *currentWorkspace;
 }
 - (IBAction) createMovie;
 
@@ -22,5 +24,6 @@
 
 - (void) writeImagesAsMovie:(NSArray *)array toPath:(NSString*)path;
 
+- (void) setWorkspaceName: (NSString*)nameW;
 
 @end

@@ -10,7 +10,12 @@
 
 
 @interface WorkspaceItem : UIView {
-    
+ 
+    NSString *title;
+    UILabel *labelName;
+    id delegate;
 }
+@property (assign) id delegate;
+- (void) setTitleName: (NSString*) _title;
 
 @end

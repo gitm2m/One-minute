@@ -7,7 +7,7 @@
 //
 #import <MessageUI/MessageUI.h>
 #import <AVFoundation/AVFoundation.h>
-
+#import "BlueGradientButton.h"
 #import "CameraController.h"
 
 @implementation CameraController
@@ -45,6 +45,8 @@
     [sliderShot setHidden:NO];
     [countShot setHidden:NO];
     [startButton setHidden:NO];
+    [hdSw setHidden:NO];
+    [hdLabel setHidden:NO];
     
     [doneButton setHidden:YES];
     
@@ -60,7 +62,7 @@
 - (IBAction) touchUpSliderShot {
 
     intervalShot = (int)sliderShot.value;
-    [countShot setText:[NSString stringWithFormat:@"%d", intervalShot]];
+    [countShot setText:[NSString stringWithFormat:@"Save every %d sec.", intervalShot]];
 }
 
 
@@ -68,10 +70,21 @@
 
 - (void)viewDidLoad {
     
+    [super viewDidLoad];
+    [self.imageView setImage:nil];
+    
+    if (![Utils iphone4]) {
+        [hdSw setOn:NO];
+        [hdSw setEnabled:NO];
+    }
+    
+//    startButton
 }
 
 - (void) viewDidAppear:(BOOL)animated {
 	
+    counter.text = @"";
+    [self.imageView setImage:nil];
 	[super viewDidAppear:animated];
 }
 
@@ -119,7 +132,10 @@
     [sliderShot setHidden:YES];
     [countShot setHidden:YES];
     [startButton setHidden:YES];
+    [hdSw setHidden:YES];
+    [hdLabel setHidden:YES];
     
+    [doneButton setHidden:NO];
     [indicator setHidden:NO];
     [indicator startAnimating];
     
@@ -223,7 +239,7 @@
     [captureOutput release];
 
     
-    if ([Utils iphone4]) {
+    if ([Utils iphone4] && !hdSw.on) {
 		[self.captureSession setSessionPreset:AVCaptureSessionPreset640x480];
 	}
     

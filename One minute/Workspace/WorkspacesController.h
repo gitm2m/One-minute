@@ -8,10 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@class EncoderImagesToMovie;
+@class WorkspaceFileListViewer;
 
-@interface WorkspacesController : UIViewController {
+@interface WorkspacesController : UIViewController <UIScrollViewDelegate> {
  
+    BOOL updateInDidLoad;
+    
     NSMutableArray *workspaces;
+    
+    IBOutlet UIScrollView *scrollView;
+    
+    EncoderImagesToMovie *encodeController;
+    
+    WorkspaceFileListViewer *fileViewerController;
 }
+
+- (void) movieCreatorOfWorkspace: (NSString*)name;
+- (void) updateWorkspaces;
 
 @end

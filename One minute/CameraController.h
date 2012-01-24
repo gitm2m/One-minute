@@ -13,8 +13,8 @@
 #import <CoreVideo/CoreVideo.h>
 #import <CoreMedia/CoreMedia.h>
 
-@class  EncoderImagesToMovie;
 
+@class BlueGradientButton;
 
 /*!
  @class	CameraController 
@@ -33,11 +33,14 @@
     IBOutlet UISlider *sliderShot;
     IBOutlet UILabel *countShot;
     
-    IBOutlet UIButton *startButton;
-    IBOutlet UIButton *doneButton;
+    IBOutlet BlueGradientButton *startButton;
+    IBOutlet BlueGradientButton *doneButton;
     
     IBOutlet UIActivityIndicatorView *indicator;
 
+    IBOutlet UISwitch *hdSw;
+    IBOutlet UILabel *hdLabel;
+    
     int imageCounter;
     int intervalShot;
     

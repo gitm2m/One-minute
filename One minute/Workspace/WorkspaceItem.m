@@ -11,6 +11,9 @@
 
 @implementation WorkspaceItem
 
+@synthesize delegate;
+
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -20,12 +23,42 @@
         [[self layer] setBorderWidth:2];
         [[self layer] setCornerRadius:15];
         [[self layer] setBorderColor:[UIColor whiteColor].CGColor];
-        [[self layer] setShadowColor:[UIColor lightGrayColor].CGColor];
-        [[self layer] setShadowRadius:0.75];
         [self setBackgroundColor:[UIColor darkGrayColor]];
     }
     return self;
 }
+
+- (void) setTitleName: (NSString*) _title {
+    title = [_title retain];
+    
+    if (labelName == nil) {
+        labelName = [[UILabel alloc] initWithFrame:CGRectMake(7, 5, self.frame.size.width-14, 14)];
+        [labelName setFont:[UIFont systemFontOfSize:10]];
+        [labelName setText:title];
+        [labelName setTextColor:[UIColor lightGrayColor]];
+        [labelName setBackgroundColor:[UIColor clearColor]];
+    }
+    [self addSubview:labelName];
+    
+}
+
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [[self layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self setBackgroundColor:[UIColor blackColor]];
+}
+
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [[self layer] setBorderColor:[UIColor whiteColor].CGColor];
+    [self setBackgroundColor:[UIColor darkGrayColor]];
+    [delegate performSelector:@selector(movieCreatorOfWorkspace:) withObject:title];
+}
+- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    [[self layer] setBorderColor:[UIColor whiteColor].CGColor];
+    [self setBackgroundColor:[UIColor darkGrayColor]];
+}
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -38,6 +71,7 @@
 
 - (void)dealloc
 {
+    [title release];
     [super dealloc];
 }
 

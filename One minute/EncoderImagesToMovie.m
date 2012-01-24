@@ -38,6 +38,14 @@ NSInteger sort(id a, id b, void *reverse) {
 }
 
 
+- (void) setWorkspaceName: (NSString*)nameW {
+    if (currentWorkspace != nil) {
+        [currentWorkspace release];
+        currentWorkspace = nil;
+    }
+    currentWorkspace = [nameW retain];
+}
+
 - (unsigned long long int) documentsFolderSize {
     NSFileManager *_manager = [NSFileManager defaultManager];
     NSArray *_documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -118,7 +126,7 @@ NSInteger sort(id a, id b, void *reverse) {
 
 - (void) writeImagesAsMovie:(NSArray *)array toPath:(NSString*)path {
     
-    NSString *documents = [Utils documentsDirectory];
+    NSString *documents = [[Utils documentsDirectory] stringByAppendingPathComponent:currentWorkspace];
     
     //NSLog(path);
     NSString *filename = [documents stringByAppendingPathComponent:[array objectAtIndex:0]];
@@ -245,9 +253,12 @@ NSInteger sort(id a, id b, void *reverse) {
     progressView.progress += delta;
 }
 
+- (void) enableInteraction {
+    [self.view setUserInteractionEnabled:YES];
+}
 
 - (void) displaySheet {
-    [self.view setUserInteractionEnabled:YES];
+    [self enableInteraction];
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Send by Mail" otherButtonTitles:@"Save to Album", nil];
     [sheet showInView:self.view];
     [sheet autorelease];
@@ -268,11 +279,18 @@ NSInteger sort(id a, id b, void *reverse) {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     
     NSFileManager *manager = [NSFileManager defaultManager];
-    NSString *documents = [Utils documentsDirectory];
+    NSString *documents = [[Utils documentsDirectory] stringByAppendingPathComponent:currentWorkspace];
     
     [manager removeItemAtPath:[documents stringByAppendingPathComponent:@"movie.mov"] error:nil];
-    
+        
     NSArray *files = [manager contentsOfDirectoryAtPath:documents error:nil];
+    
+    if ([files count] == 0) {
+        [self performSelectorOnMainThread:@selector(enableInteraction) withObject:nil waitUntilDone:YES];
+        [pool release];
+        return;
+    }
+    
     [self writeImagesAsMovie:files toPath:[documents stringByAppendingPathComponent:@"movie.mov"]];
     [pool release];
 }
@@ -295,7 +313,7 @@ NSInteger sort(id a, id b, void *reverse) {
 		[mailPicker setMessageBody: @"Movie" isHTML: YES];
 		
 
-        NSURL    *fileURL = [[NSURL alloc] initFileURLWithPath:[[Utils documentsDirectory] stringByAppendingPathComponent:@"movie.mov"]];
+        NSURL    *fileURL = [[NSURL alloc] initFileURLWithPath:[[[Utils documentsDirectory] stringByAppendingPathComponent:currentWorkspace] stringByAppendingPathComponent:@"movie.mov"]];
         NSData *soundFile = [[NSData alloc] initWithContentsOfURL:fileURL];
         [mailPicker addAttachmentData:soundFile mimeType:@"mov/mpeg" fileName:@"movie.mov"];
 		
@@ -340,7 +358,7 @@ NSInteger sort(id a, id b, void *reverse) {
 #pragma mark save to librarry
 
 - (void) saveToMediaLibrary {
-    NSString *documents = [Utils documentsDirectory];
+    NSString *documents = [[Utils documentsDirectory] stringByAppendingPathComponent:currentWorkspace];
     
     UISaveVideoAtPathToSavedPhotosAlbum([documents stringByAppendingPathComponent:@"movie.mov"],
                                         self,
@@ -408,7 +426,6 @@ NSInteger sort(id a, id b, void *reverse) {
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
     [super viewWillAppear:animated];
 }
 
@@ -419,7 +436,6 @@ NSInteger sort(id a, id b, void *reverse) {
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
     [super viewWillDisappear:animated];
 }
 
